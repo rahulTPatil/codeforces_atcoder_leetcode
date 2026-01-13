@@ -10,5 +10,6 @@ import (
 //import C "codeforces_atcoder_leetcode/codeforces"
 
 func main() {
-	fmt.Println(L.AddBinary("11", "1"))
+	digits := []int{2, 2, 1, 1, 1, 2, 2}
+	fmt.Println(L.MajorityElement(digits))
 }
