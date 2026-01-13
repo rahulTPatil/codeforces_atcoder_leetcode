@@ -1,28 +1,18 @@
 package leetcode
 
 func Palindrome(x int) bool {
-	var ans bool
-	var digits []int
+	var rev int
 
-	if x >= 0 && x <= 9 {
-		ans = true
-		return ans
+	if x < 0 {
+		return false
 	}
 
+	x2 := x
+
 	for x > 0 {
-		c := x % 10
-		digits = append(digits, c)
+		rev = (rev * 10) + (x % 10)
 		x = x / 10
 	}
 
-	for i := 0; i < len(digits)/2; i++ {
-		for j := len(digits) - 1; j > len(digits)/2; j-- {
-			if digits[i] == digits[j] {
-				ans = true
-			} else {
-				ans = false
-			}
-		}
-	}
-	return ans
+	return rev == x2
 }
