@@ -10,6 +10,7 @@ import (
 //import C "codeforces_atcoder_leetcode/codeforces"
 
 func main() {
-	digits := []int{2, 2, 1, 1, 1, 2, 2}
-	fmt.Println(L.MajorityElement(digits))
+	digits := []int{1, 3, 5, 6}
+	target := 7
+	fmt.Println(L.SearchInsert(digits, target))
 }
